@@ -15,64 +15,76 @@ body{
 
 /* ---------- Header ---------- */
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:8px 20px;
-    border-bottom:1px solid #eee;
-    background:#fff;
+/* ---------- Header Styles ---------- */
+.header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-.container{
-    width:90%;
-    max-width:1400px;
-
-    margin:auto;
-
-    height:70px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
+.header-top, 
+.header-main {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.villa{
-    font-size:30px;
-    font-weight:800;
-    white-space:nowrap;
+.header-top {
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+    font-size: 12px;
 }
 
-.mainnav{
-    flex:1;
-    margin-left:80px;
+.contact-info {
+    display: flex;
+    gap: 20px;
 }
 
-.menu{
-    list-style:none;
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    gap:45px;
-
-    align-items:right;
+.top-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-.menu a{
-    text-decoration:none;
-    color:#222;
-    font-weight:600;
+.header-main {
+    height: 80px;
 }
 
-.Schedule{
-    margin-left:40px;
-    margin-right:-60px;
-    white-space:nowrap;
+.villa {
+    font-size: 24px;
+    font-weight: 800;
+    white-space: nowrap;
+    letter-spacing: -0.5px;
 }
+
+.mainnav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+.Schedule {
+    white-space: nowrap;
+}
+
+.container { display: none; } /* Replaced by semantic responsive headers */
 
 button{
     padding:10px 18px;
@@ -594,8 +606,10 @@ nav.mainnav a{
     padding: 18px;
     display: flex;
     flex-direction: column;
-    background: #f8f8f8; /* Ensures background matches the card */
-    height: 350px; /* Ensures the card body takes up the remaining space */
+    justify-content: space-between; /* Securely pushes the button to the bottom edge */
+    background: #f8f8f8;
+    min-height: 350px; /* Changed from height to min-height to allow content expansion */
+    height: auto;
 }
 
 .price-row{
@@ -708,88 +722,42 @@ footer{
    ========================================================================== */
 
 /* Tablet view (Under 992px) */
+/* ---------- Mobile Responsive Queries ---------- */
 @media (max-width: 992px) {
-    /* Stack the three main feature columns vertically */
     .content {
         flex-direction: column;
-        gap: 40px;
-        margin: 60px auto;
-    }
-
-    .column:nth-child(3) {
-        width: 100%; /* Allow stats to take up full width */
-    }
-
-    /* Stack the orange statistics cards */
-    .stats-row {
-        flex-direction: column;
-        align-items: center;
         gap: 30px;
-        margin-bottom: 60px;
+        margin: 50px auto;
     }
-
-    .orange-card {
-        width: 100%;
-        max-width: 340px;
-    }
-
-    /* Shrink the massive hero text and reduce margins */
-    .hero-content {
-        left: 30px;
-    }
-    
-    .glass-container, .hero h1 {
-        margin-left: 0;
-    }
-
     .hero h1 {
-        font-size: 40px;
+        font-size: 38px;
+        margin-left: 30px !important;
     }
-
-    /* Make the YouTube video scale down responsively */
-    .floating-video {
-        width: 90% !important;
-        height: auto;
-        aspect-ratio: 16 / 9; /* Maintains video proportions */
-        margin-bottom: -150px;
+    .glass-container {
+        margin-left: 30px !important;
     }
-    
-    .villa-image h1 {
-        font-size: 32px;
-        margin-left: 0 !important;
-        text-align: center;
+    .hero-content {
+        left: 0 !important;
     }
 }
 
-/* Mobile Phone view (Under 768px) */
 @media (max-width: 768px) {
-    /* Hide the desktop nav menu and show just the logo and button */
-    .mainnav {
-        display: none; 
+    .mainnav, .Schedule {
+        display: none; /* Safely hide full text menus on small phone viewports */
     }
-
-    .header-main {
-        height: 70px;
-    }
-
-    .villa {
-        font-size: 20px;
-    }
-
-    /* Stack the top header info (Email / Phone) */
     .header-top {
         flex-direction: column;
         gap: 5px;
-        padding: 10px 0;
         text-align: center;
     }
-
     .contact-info {
         flex-direction: column;
-        gap: 5px;
+        gap: 4px;
     }
-
-    /* Bring Swiper arrows slightly inward so they don't clip off-screen */
-    .property-prev { left: -15px !important; }
-    .property-next { right: -15px !important; }
+    .villa {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+    }
 }
