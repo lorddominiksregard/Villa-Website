@@ -1,0 +1,795 @@
+/* Cleaned styles.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    color:#222;
+    background:#fff;
+    overflow-x:hidden;
+}
+
+/* ---------- Header ---------- */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 20px;
+    border-bottom:1px solid #eee;
+    background:#fff;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+
+    margin:auto;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.villa{
+    font-size:30px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.mainnav{
+    flex:1;
+    margin-left:80px;
+}
+
+.menu{
+    list-style:none;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:45px;
+
+    align-items:right;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+}
+
+.Schedule{
+    margin-left:40px;
+    margin-right:-60px;
+    white-space:nowrap;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:50px;
+    background:#000;
+    color:#fff;
+    cursor:pointer;
+}
+
+nav.mainnav{
+    flex:1;
+}
+
+
+nav.mainnav a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+}
+
+
+
+.main{
+    font-size: 22px; font-weight: 800; letter-spacing: -1px; text-transform: bold;
+}
+
+.menu .li .a{
+    margin-bottom: 10px;
+}
+/* ---------- Hero ---------- */
+
+.hero{
+    position:relative;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    overflow:hidden;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:2;
+}  
+
+.heroSwiper{
+    width:100%;
+    height:100%;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.swiper-pagination-bullet{
+    width:14px;
+    height:14px;
+    background:white;
+    opacity:0.6;
+}
+
+.swiper-pagination-bullet-active{
+    background:#e8863a;
+    opacity:1;
+}
+
+.hero-content{
+
+    position:absolute;
+
+    top:50%;
+
+    left:150px;
+
+    transform:translateY(-50%);
+
+    z-index:3;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+
+
+.slider{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+
+    width:300%;
+
+    animation:slide 15s infinite;
+}
+
+.slider img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes slide{
+
+    0%,25%{
+        transform:translateX(0%);
+    }
+
+    33%,58%{
+        transform:translateX(-100%);
+    }
+
+    66%,91%{
+        transform:translateX(-200%);
+    }
+
+    100%{
+        transform:translateX(0%);
+    }
+
+}
+
+.glass-container{
+    margin-left:150px;
+    padding:8px 18px;
+    display:inline-flex;
+    width:200px;
+    background:rgba(255,255,255,.4);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:16px;
+    z-index:1;
+}
+
+.hero-text{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.highlight{
+    color:#ff00d4;
+}
+
+.hero h1{
+    margin-left:150px;
+    margin-top:15px;
+    color:#fff;
+    font-size:64px;
+    line-height:1.1;
+    z-index:1;
+}
+
+/* ---------- Middle Section ---------- */
+
+.content{
+    width:90%;
+    max-width:1100px;
+    margin:100px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:60px;
+}
+
+.column{
+    display:flex;
+    flex-direction:column;
+}
+
+.column:nth-child(1){flex:1;}
+.column:nth-child(2){flex:1;}
+.column:nth-child(3){width:260px;}
+
+.image-wrap{
+    position:relative;
+}
+
+.new-image{
+    width:100%;
+    max-width:400px;
+    display:block;
+    border-radius:8px;
+}
+
+.badge-icon{
+    position:absolute;
+    left:-18px;
+    bottom:-18px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#e8863a;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.feature-title{
+    color:#ff5a3c;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.feature-heading{
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:30px;
+}
+
+.info-card{
+    max-width:350px;
+    background:#f2f2f2;
+    padding:25px;
+    border-radius:8px;
+    line-height:1.7;
+}
+
+.info-card .lead{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.info-card .lead span{
+    color:#e8863a;
+}
+
+.stat-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.stat-item{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    padding:25px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 5px 18px rgba(0,0,0,.12);
+}
+
+.stat-icon{
+    width:42px;
+    height:42px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ---------- Video ---------- */
+
+.villa-image{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:80vh;
+    background:url("https://images.unsplash.com/photo-1514539079130-25950c84af65?q=80&w=1169&auto=format&fit=crop") center/cover;
+}
+
+.floating-video{
+    margin-bottom:-200px;
+    z-index:2;
+}
+
+/* ---------- Next Section ---------- */
+
+.next-section{
+
+    position:relative;
+
+    background:white;
+
+    margin-top:180px;
+
+    padding-top:260px;
+
+    min-height:100vh;
+
+    z-index:2;
+}
+
+.property-section{
+    width:90%;
+    max-width:1300px;
+    margin:0 auto 100px;
+}
+
+/* Statistics */
+
+.stats-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:100px;
+}
+
+.orange-card{
+
+    position:relative;
+
+    width:280px;
+    height:90px;
+
+    background:#fff1e8;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px;
+}
+
+.orange-card h2{
+
+    color:#f67c1f;
+
+    font-size:42px;
+
+    font-weight:800;
+}
+
+.orange-card h4{
+
+    font-size:18px;
+
+    margin-bottom:5px;
+}
+
+.orange-card p{
+
+    color:#777;
+}
+
+.circle{
+
+    position:absolute;
+
+    width:45px;
+
+    height:45px;
+
+    background:#ef4444;
+
+    border-radius:50%;
+
+    top:-15px;
+
+    right:-15px;
+}
+
+/* Heading */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+}
+
+.section-title h5{
+
+    color:#ff5a3c;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+}
+
+.section-title h1{
+
+    color:#222;
+
+    margin:0;
+
+    font-size:52px;
+
+    line-height:1.3;
+}
+
+/* Property Grid */
+
+.propertySwiper{
+    width:100%;
+    overflow:hidden;
+    padding: 20px 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.propertySwiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.propertySwiper .swiper-slide {
+    height: auto !important; /* Lets the card height expand naturally for content */
+    display: flex !important;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.property-card img {
+    width: 100%;
+    height: 220px;       /* Give the image a fixed, reliable height */
+    object-fit: cover;   /* Keeps the image looking sharp without distorting */
+}
+
+.property-card {
+    background: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+    
+    /* Let Swiper's breakpoints control the width completely */
+    width: 100%; 
+    max-width: 380px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,.15);
+}
+
+.property-section{
+    position:relative;
+    padding:0 70px;
+}
+
+.property-prev,
+.property-next {
+    position: absolute; /* Ensures they anchor to the relative .propertySwiper */
+    top: 50%;           /* Centers them vertically */
+    transform: translateY(-50%);
+    z-index: 1000 !important;
+    color: #ff6b35;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex !important; /* Forces them to render visually */
+    align-items: center;
+    justify-content: center;
+    margin-top: 500; 
+}
+
+.property-prev{
+    left: 30px !important;
+}
+
+.property-next{
+    right: 30px !important;
+}
+
+.property-next::after,
+.property-prev::after{
+    margin-top: 500px;
+    font-size:30px;
+    font-weight: bold;
+}
+
+
+
+.property-card{
+
+    background:#f8f8f8;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    width:85%;
+}
+
+.property-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.property-card img{
+
+    width:100%;
+
+    display:block;
+}
+
+.card-body {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8; /* Ensures background matches the card */
+    height: 350px; /* Ensures the card body takes up the remaining space */
+}
+
+.price-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:18px;
+}
+
+.type{
+
+    background:#ffe6d5;
+
+    padding:6px 12px;
+
+    border-radius:6px;
+
+    font-size:14px;
+
+    font-weight:bold;
+}
+
+.price{
+
+    color:#f67c1f;
+
+    font-weight:800;
+
+    font-size:22px;
+}
+
+.property-card h3{
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+    line-height:1.4;
+}
+
+.details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+    color:#666;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+}
+
+.property-card button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#222;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.property-card button:hover{
+
+    background:#f67c1f;
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+    background:#000;
+    color:#fff;
+    padding:15px 20px;
+    font-size:13px;
+}
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f5f5f5;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#e8863a;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff5a3c;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVENESS
+   ========================================================================== */
+
+/* Tablet view (Under 992px) */
+@media (max-width: 992px) {
+    /* Stack the three main feature columns vertically */
+    .content {
+        flex-direction: column;
+        gap: 40px;
+        margin: 60px auto;
+    }
+
+    .column:nth-child(3) {
+        width: 100%; /* Allow stats to take up full width */
+    }
+
+    /* Stack the orange statistics cards */
+    .stats-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .orange-card {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    /* Shrink the massive hero text and reduce margins */
+    .hero-content {
+        left: 30px;
+    }
+    
+    .glass-container, .hero h1 {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    /* Make the YouTube video scale down responsively */
+    .floating-video {
+        width: 90% !important;
+        height: auto;
+        aspect-ratio: 16 / 9; /* Maintains video proportions */
+        margin-bottom: -150px;
+    }
+    
+    .villa-image h1 {
+        font-size: 32px;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+}
+
+/* Mobile Phone view (Under 768px) */
+@media (max-width: 768px) {
+    /* Hide the desktop nav menu and show just the logo and button */
+    .mainnav {
+        display: none; 
+    }
+
+    .header-main {
+        height: 70px;
+    }
+
+    .villa {
+        font-size: 20px;
+    }
+
+    /* Stack the top header info (Email / Phone) */
+    .header-top {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Bring Swiper arrows slightly inward so they don't clip off-screen */
+    .property-prev { left: -15px !important; }
+    .property-next { right: -15px !important; }
+}
