@@ -367,6 +367,10 @@ nav.mainnav a{
     background:url("https://images.unsplash.com/photo-1514539079130-25950c84af65?q=80&w=1169&auto=format&fit=crop") center/cover;
 }
 
+.villa-image h1{
+    margin-bottom: 200px; color: rgb(255, 255, 255); font-size: 48px; font-weight: bold; margin-left: -10px;
+}
+
 .floating-video{
     margin-bottom:-200px;
     z-index:2;
